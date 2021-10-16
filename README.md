@@ -1,0 +1,2 @@
+# ckame_boost_ubuntu
+ubuntu上にCMAKEとboostの特定バージョンをbuildするdocker-image
