@@ -27,7 +27,9 @@ RUN set -x && \
     make && \
     make install && \ 
     export PATH="/usr/local/bin:$PATH" && \
-    rm -rf /work/cmake-3.21.3
+    rm -rf /work/cmake-3.21.3 && \ 
+    rm -rf /work/boost_1_77_0.tar.gz && \
+    rm -rf /work/cmake-3.21.3.tar.gz
 
 CMD ["/bin/bash"]
 
