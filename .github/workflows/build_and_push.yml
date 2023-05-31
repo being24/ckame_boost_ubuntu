@@ -1,14 +1,15 @@
-name: Build Docker
+name: Build and Publish Docker
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build_and_push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: cmake_boost_ubuntu
+      IMAGE_NAME: ubuntu-boost-base
     steps:
       - name: checkout
         uses: actions/checkout@v2
