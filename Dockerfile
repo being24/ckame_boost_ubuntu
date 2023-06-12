@@ -1,7 +1,7 @@
 
 FROM ubuntu:22.04
 
-WORKDIR /work/
+WORKDIR /workdir/
 
 ENV LC_CTYPE='C.UTF-8'
 ENV LC_ALL='C.UTF-8'
