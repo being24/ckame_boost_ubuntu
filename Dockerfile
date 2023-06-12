@@ -18,7 +18,9 @@ RUN set -x && \
     sh ./bootstrap.sh && \
     ./b2 install -j2 -j $(grep cpu.cores /proc/cpuinfo | sort -u | awk '{split($0, ary, ": "); print(ary[2] + 1)}' ) && \
     cd /workdir && \
-    rm -rf boost_1_82_0
+    rm -rf boost_1_82_0 \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 CMD ["/bin/bash"]
 
