@@ -17,7 +17,7 @@ RUN set -x && \
     cd ./boost_1_82_0 && \
     sh ./bootstrap.sh && \
     ./b2 install -j2 -j $(grep cpu.cores /proc/cpuinfo | sort -u | awk '{split($0, ary, ": "); print(ary[2] + 1)}' ) && \
-    cd /work && \
+    cd /workdir && \
     rm -rf boost_1_82_0
 
 CMD ["/bin/bash"]
